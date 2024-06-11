@@ -16,6 +16,7 @@ const DemoProduct = (props) => {
     const [phone, setPhone] = useState('')
     const [message, setMessage] = useState('')
     // const [demoProducts, setDemoProducts ] = useState([])
+    const [demoProducts] = useState([])
     const [errors, setErrors] = useState([])
 
 
@@ -30,8 +31,8 @@ const DemoProduct = (props) => {
     //     } else {
     //         setDemoProducts(demoProducts.filter( (e) => (e !== value )))
     //     }
-       
     // }
+
     const clearErrors = () => {
         setErrors([])
     }
