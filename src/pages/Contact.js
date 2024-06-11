@@ -2,9 +2,8 @@ import React, { useState, useRef } from 'react';
 import NavBar from '../components/Navbar/NavBar';
 import Footer from '../components/Footer';
 import {useDocTitle} from '../components/CustomHook';
-import axios from 'axios';
+// import axios from 'axios';
 import emailjs from 'emailjs-com';
-// import emailjs from '@emailjs/browser';
 import Notiflix from 'notiflix';
 
 
