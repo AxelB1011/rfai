@@ -19,19 +19,19 @@ const DemoProduct = (props) => {
     const [errors, setErrors] = useState([])
 
 
-    const handleChange = (e) => {
-        const value = e.target.value
-        const checked = e.target.checked
-        errors.products = []
-        if(checked) {
-            setDemoProducts([
-                ...demoProducts, value
-            ])
-        } else {
-            setDemoProducts(demoProducts.filter( (e) => (e !== value )))
-        }
+    // const handleChange = (e) => {
+    //     const value = e.target.value
+    //     const checked = e.target.checked
+    //     errors.products = []
+    //     if(checked) {
+    //         setDemoProducts([
+    //             ...demoProducts, value
+    //         ])
+    //     } else {
+    //         setDemoProducts(demoProducts.filter( (e) => (e !== value )))
+    //     }
        
-    }
+    // }
     const clearErrors = () => {
         setErrors([])
     }
@@ -59,6 +59,7 @@ const DemoProduct = (props) => {
         emailjs.sendForm('service_25ml3t2', 'template_0pewuao', e.target, 'cLxMl06-O4fluEdw0')
           .then((result) => {
               console.log(result.text);
+              clearInput();
               Notiflix.Report.success(
                 'Success',
                 '"Thanks for sending a message, we\'ll be in touch soon."',

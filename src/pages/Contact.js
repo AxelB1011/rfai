@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import NavBar from '../components/Navbar/NavBar';
 import Footer from '../components/Footer';
 import {useDocTitle} from '../components/CustomHook';
@@ -43,6 +43,7 @@ const Contact = () => {
         emailjs.sendForm('service_25ml3t2', 'template_0pewuao', e.target, 'cLxMl06-O4fluEdw0')
           .then((result) => {
               console.log(result.text);
+              clearInput();
               Notiflix.Report.success(
                 'Success',
                 'Message sent successfully!',
