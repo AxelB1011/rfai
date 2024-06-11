@@ -30,7 +30,7 @@ function App() {
     });
   }, []);
 
-  useDocTitle("MLD | Molad e Konsult - Bespoke Web and Mobile Applications");
+  useDocTitle("RF AI | Captcha for social media content");
 
   return (
     <>

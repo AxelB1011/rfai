@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import NavBar from '../components/Navbar/NavBar';
 import Footer from '../components/Footer';
 import {useDocTitle} from '../components/CustomHook';
-import axios from 'axios';
-// import emailjs from 'emailjs-com';
+// import axios from 'axios';
+import emailjs from 'emailjs-com';
 import Notiflix from 'notiflix';
 
 const DemoProduct = (props) => {
@@ -56,59 +56,59 @@ const DemoProduct = (props) => {
         fData.append('message', message)
         fData.append('products', demoProducts)
 
-        // emailjs.sendForm('service_7uy4ojg', 'template_et9wvdg', e.target, 'user_uE0bSPGbhRTmAF3I2fd3s')
-        //   .then((result) => {
-        //       console.log(result.text);
-        //       Notiflix.Report.success(
-        //         'Success',
-        //         '"Thanks for sending a message, we\'ll be in touch soon."',
-        //         'Okay',
-        //         );
-        //   }, (error) => {
-        //       console.log(error.text);
-        //       Notiflix.Report.failure(
-        //         'An error occured',
-        //         'Please try sending the message again.',
-        //         'Okay',
-        //         );
-        //   });
-
-        axios({
-            method: "post",
-            url: process.env.REACT_APP_DEMO_REQUEST_API,
-            data: fData,
-            headers: {
-                'Content-Type':  'multipart/form-data'
-            }
-        })
-        .then(function (response) {
-            document.getElementById('submitBtn').disabled = false;
-            document.getElementById('submitBtn').innerHTML = 'send message';
-            clearInput()
-            //handle success
-            Notiflix.Report.success(
+        emailjs.sendForm('service_25ml3t2', 'template_0pewuao', e.target, 'cLxMl06-O4fluEdw0')
+          .then((result) => {
+              console.log(result.text);
+              Notiflix.Report.success(
                 'Success',
-                response.data.message,
+                '"Thanks for sending a message, we\'ll be in touch soon."',
                 'Okay',
-            );
-        })
-        .catch(function (error) {
-            document.getElementById('submitBtn').disabled = false;
-            document.getElementById('submitBtn').innerHTML = 'send message';
-            //handle error
-            const { response } = error;
-            if(response.status === 500) {
-                Notiflix.Report.failure(
-                    'An error occurred',
-                    response.data.message,
-                    'Okay',
                 );
-            }
-            if(response.data.errors !== null) {
-                setErrors(response.data.errors)
-            }
+          }, (error) => {
+              console.log(error.text);
+              Notiflix.Report.failure(
+                'An error occured',
+                'Please try sending the message again.',
+                'Okay',
+                );
+          });
+
+        // axios({
+        //     method: "post",
+        //     url: process.env.REACT_APP_DEMO_REQUEST_API,
+        //     data: fData,
+        //     headers: {
+        //         'Content-Type':  'multipart/form-data'
+        //     }
+        // })
+        // .then(function (response) {
+        //     document.getElementById('submitBtn').disabled = false;
+        //     document.getElementById('submitBtn').innerHTML = 'send message';
+        //     clearInput()
+        //     //handle success
+        //     Notiflix.Report.success(
+        //         'Success',
+        //         response.data.message,
+        //         'Okay',
+        //     );
+        // })
+        // .catch(function (error) {
+        //     document.getElementById('submitBtn').disabled = false;
+        //     document.getElementById('submitBtn').innerHTML = 'send message';
+        //     //handle error
+        //     const { response } = error;
+        //     if(response.status === 500) {
+        //         Notiflix.Report.failure(
+        //             'An error occurred',
+        //             response.data.message,
+        //             'Okay',
+        //         );
+        //     }
+        //     if(response.data.errors !== null) {
+        //         setErrors(response.data.errors)
+        //     }
             
-        });
+        // });
     }
     return (
         <>
@@ -123,6 +123,10 @@ const DemoProduct = (props) => {
                                 <h1 className="font-bold text-center lg:text-left text-blue-900 uppercase text-4xl">Demo our products</h1>
                             </div>
                             <div className="flex items-center my-4">
+                                <a href="https://youtube.com/" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Link to our demo video</a>
+                            </div>
+                            
+                            {/* <div className="flex items-center my-4">
                                 <input 
                                     id="checkbox-1" 
                                     aria-describedby="checkbox-1" 
@@ -161,7 +165,7 @@ const DemoProduct = (props) => {
                                     value="event_management_system" onChange={handleChange}
                                 />
                                 <label htmlFor="checkbox-1" className="ml-3 text-lg font-medium text-gray-900">Event Management System</label>
-                            </div>
+                            </div> */}
                             {errors && 
                                 <p className="text-red-500 text-sm">{errors.products}</p>
                             }
@@ -243,7 +247,7 @@ const DemoProduct = (props) => {
                         <div className="my-2 w-1/2 lg:w-2/4">
                             <button type="submit" id="submitBtn" className="uppercase text-sm font-bold tracking-wide bg-gray-500 hover:bg-blue-900 text-gray-100 p-3 rounded-lg w-full 
                                     focus:outline-none focus:shadow-outline">
-                                Send Message
+                                Send Feedback
                             </button>
                         </div>
                     </div>
@@ -256,7 +260,7 @@ const DemoProduct = (props) => {
                                 </div>
                                 <div className="flex flex-col">
                                     <h2 className="text-2xl">Office Address</h2>
-                                    <p className="text-gray-400">Ilo Awela, Ota, Ogun State</p>
+                                    <p className="text-gray-400">Boston, MA, US</p>
                                 </div>
                             </div>
                             
@@ -267,21 +271,18 @@ const DemoProduct = (props) => {
 
                                 <div className="flex flex-col">
                                     <h2 className="text-2xl">Call Us</h2>
-                                    <p className="text-gray-400">Tel: 08055384406</p>
+                                    <p className="text-gray-400">Tel: (813)970-4966</p>
                                 
                                     <div className='mt-5'>
                                         <h2 className="text-2xl">Send an E-mail</h2>
-                                        <p className="text-gray-400">info@mld.ng</p>
+                                        <p className="text-gray-400">gopal@rfai.info</p>
                                     </div>
                             
                                 </div>
                             </div>
                             
                             <div className="flex my-4 w-2/3 lg:w-1/2">
-                                <a href="https://www.facebook.com/ENLIGHTENEERING/" target="_blank" rel="noreferrer" className="rounded-full flex justify-center bg-white h-8 text-blue-900  w-8 mx-1 text-center pt-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className='fill-current font-black hover:animate-pulse'><path d="M13.397 20.997v-8.196h2.765l.411-3.209h-3.176V7.548c0-.926.258-1.56 1.587-1.56h1.684V3.127A22.336 22.336 0 0 0 14.201 3c-2.444 0-4.122 1.492-4.122 4.231v2.355H7.332v3.209h2.753v8.202h3.312z"></path></svg>
-                                </a>
-                                <a href="https://www.linkedin.com/company/enlighteneering-inc-" target="_blank" rel="noreferrer" className="rounded-full flex justify-center bg-white h-8 text-blue-900  w-8 mx-1 text-center pt-1">
+                                <a href="https://www.linkedin.com/in/gopalk-shukla/" target="_blank" rel="noreferrer" className="rounded-full flex justify-center bg-white h-8 text-blue-900  w-8 mx-1 text-center pt-1">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className='fill-current font-black hover:animate-pulse'><circle cx="4.983" cy="5.009" r="2.188"></circle><path d="M9.237 8.855v12.139h3.769v-6.003c0-1.584.298-3.118 2.262-3.118 1.937 0 1.961 1.811 1.961 3.218v5.904H21v-6.657c0-3.27-.704-5.783-4.526-5.783-1.835 0-3.065 1.007-3.568 1.96h-.051v-1.66H9.237zm-6.142 0H6.87v12.139H3.095z"></path></svg>
                                 </a>
                             </div>
