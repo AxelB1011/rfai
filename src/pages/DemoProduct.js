@@ -15,7 +15,7 @@ const DemoProduct = (props) => {
     const [email, setEmail] = useState('')
     const [phone, setPhone] = useState('')
     const [message, setMessage] = useState('')
-    const [demoProducts, setDemoProducts ] = useState([])
+    // const [demoProducts, setDemoProducts ] = useState([])
     const [errors, setErrors] = useState([])
 
 
