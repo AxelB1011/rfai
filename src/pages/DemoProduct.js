@@ -261,7 +261,6 @@
 // }
 
 // export default DemoProduct;
-
 import React, { useState } from 'react';
 import NavBar from '../components/Navbar/NavBar';
 import Footer from '../components/Footer';
@@ -272,26 +271,26 @@ import Notiflix from 'notiflix';
 const DemoProduct = (props) => {
     useDocTitle('MLD | Molad e Konsult - Demo our products');
 
-    const [firstName, setFirstName] = useState('');
-    const [lastName, setLastName] = useState('');
-    const [email, setEmail] = useState('');
-    const [phone, setPhone] = useState('');
+    // const [firstName, setFirstName] = useState('');
+    // const [lastName, setLastName] = useState('');
+    // const [email, setEmail] = useState('');
+    // const [phone, setPhone] = useState('');
     const [message, setMessage] = useState('');
     const [videoId, setVideoId] = useState('');
     const [channelId, setChannelId] = useState('');
     const [result, setResult] = useState(null);
-    const [demoProducts] = useState([]);
+    // const [demoProducts] = useState([]);
     const [errors, setErrors] = useState([]);
 
-    const clearErrors = () => {
-        setErrors([]);
-    }
+    // const clearErrors = () => {
+    //     setErrors([]);
+    // }
 
     const clearInput = () => {
-        setFirstName('');
-        setLastName('');
-        setEmail('');
-        setPhone('');
+        // setFirstName('');
+        // setLastName('');
+        // setEmail('');
+        // setPhone('');
         setMessage('');
     }
 
@@ -405,31 +404,9 @@ const DemoProduct = (props) => {
                                 <button type="submit" className="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Start Monitoring</button>
                             </form>
 
-                            {/* <h2 className="font-bold text-2xl mb-4">Stop Monitoring</h2> */}
                             <form onSubmit={handleStopMonitoringSubmit} id="stopMonitoringForm" className="mb-8">
                                 <button type="submit" className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Stop Monitoring</button>
                             </form>
-
-                            {/* <div id="result" className="text-gray-900"></div>
-                            <div className="my-4">
-                                <textarea
-                                    name="message"
-                                    placeholder="Message*"
-                                    className="w-full h-32 bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-                                    value={message}
-                                    onChange={(e) => setMessage(e.target.value)}
-                                    onKeyUp={clearErrors}
-                                ></textarea>
-                                {errors && 
-                                    <p className="text-red-500 text-sm">{errors.message}</p>
-                                }
-                            </div>
-                            <div className="my-2 w-1/2 lg:w-2/4">
-                                <button type="submit" id="submitBtn" className="uppercase text-sm font-bold tracking-wide bg-gray-500 hover:bg-blue-900 text-gray-100 p-3 rounded-lg w-full 
-                                    focus:outline-none focus:shadow-outline">
-                                    Send Feedback
-                                </button>
-                            </div> */}
                         </div>
                     </form>
                 </div>
