@@ -261,7 +261,6 @@
 // }
 
 // export default DemoProduct;
-
 import React, { useState } from 'react';
 import NavBar from '../components/Navbar/NavBar';
 import Footer from '../components/Footer';
@@ -274,8 +273,6 @@ const DemoProduct = (props) => {
 
     const [videoId, setVideoId] = useState('');
     const [channelId, setChannelId] = useState('');
-    const [result, setResult] = useState(null);
-    const [errors, setErrors] = useState([]);
 
     const clearInput = () => {
         setVideoId('');
@@ -317,7 +314,7 @@ const DemoProduct = (props) => {
         })
             .then(response => response.json())
             .then(data => {
-                setResult(data);
+                console.log(data);
             })
             .catch(error => {
                 console.error("Error:", error);
@@ -335,7 +332,7 @@ const DemoProduct = (props) => {
         })
             .then(response => response.json())
             .then(data => {
-                setResult(data);
+                console.log(data);
             })
             .catch(error => {
                 console.error("Error:", error);
@@ -352,7 +349,7 @@ const DemoProduct = (props) => {
         })
             .then(response => response.json())
             .then(data => {
-                setResult(data);
+                console.log(data);
             })
             .catch(error => {
                 console.error("Error:", error);
@@ -374,10 +371,6 @@ const DemoProduct = (props) => {
                             <div className="flex items-center my-4">
                                 <a href="https://youtube.com/" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Link to our demo video</a>
                             </div>
-
-                            {errors && 
-                                <p className="text-red-500 text-sm">{errors.products}</p>
-                            }
 
                             <form onSubmit={handleVideoSubmit} id="videoForm" className="mb-8">
                                 <label htmlFor="videoId" className="block mb-2">Enter Video ID:</label>
