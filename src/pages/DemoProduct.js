@@ -261,6 +261,7 @@
 // }
 
 // export default DemoProduct;
+
 import React, { useState } from 'react';
 import NavBar from '../components/Navbar/NavBar';
 import Footer from '../components/Footer';
@@ -271,27 +272,14 @@ import Notiflix from 'notiflix';
 const DemoProduct = (props) => {
     useDocTitle('MLD | Molad e Konsult - Demo our products');
 
-    // const [firstName, setFirstName] = useState('');
-    // const [lastName, setLastName] = useState('');
-    // const [email, setEmail] = useState('');
-    // const [phone, setPhone] = useState('');
-    const [message, setMessage] = useState('');
     const [videoId, setVideoId] = useState('');
     const [channelId, setChannelId] = useState('');
     const [result, setResult] = useState(null);
-    // const [demoProducts] = useState([]);
     const [errors, setErrors] = useState([]);
 
-    // const clearErrors = () => {
-    //     setErrors([]);
-    // }
-
     const clearInput = () => {
-        // setFirstName('');
-        // setLastName('');
-        // setEmail('');
-        // setPhone('');
-        setMessage('');
+        setVideoId('');
+        setChannelId('');
     }
 
     const sendEmail = (e) => {
@@ -393,14 +381,14 @@ const DemoProduct = (props) => {
 
                             <form onSubmit={handleVideoSubmit} id="videoForm" className="mb-8">
                                 <label htmlFor="videoId" className="block mb-2">Enter Video ID:</label>
-                                <input type="text" id="videoId" name="videoId" className="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" required />
+                                <input type="text" id="videoId" name="videoId" className="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" value={videoId} onChange={(e) => setVideoId(e.target.value)} required />
                                 <button type="submit" className="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Process Video</button>
                             </form>
 
                             <h2 className="font-bold text-2xl mb-4">Monitoring for New Uploads</h2>
                             <form onSubmit={handleChannelSubmit} id="channelForm" className="mb-8">
                                 <label htmlFor="channelId" className="block mb-2">Enter Channel ID:</label>
-                                <input type="text" id="channelId" name="channelId" className="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" required />
+                                <input type="text" id="channelId" name="channelId" className="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" value={channelId} onChange={(e) => setChannelId(e.target.value)} required />
                                 <button type="submit" className="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Start Monitoring</button>
                             </form>
 
