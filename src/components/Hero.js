@@ -19,7 +19,7 @@ const Hero = () => {
                             {/* We build digital solutions to help businesses scale */}
                                 Captcha for social media content
                             </h1>
-                            <div className="text-xl font-semibold tracking-tight mb-5 text-gray-500">We are a team of one highly motivated and skilled developer dedicated to putting an end to the misuse of AI generated content.</div>
+                            <div className="text-xl font-semibold tracking-tight mb-5 text-gray-500">Misinformation/disinformation ranks as the most severe near-term global risk in the <a className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out" href="https://www3.weforum.org/docs/WEF_The_Global_Risks_Report_2024.pdf">World Economic Forum’s 2024 Global Risks Report.</a> RF AI is dedicated to putting an end to the misuse of AI generated content from its source - social media platforms.</div>
                             <div className="mb-4 space-x-0 md:space-x-2 md:mb-8">
                                 <Link to="/contact" className="text-white bg-blue-900 hover:bg-blue-800 inline-flex items-center justify-center w-full px-6 py-3 my-4 text-lg shadow-xl rounded-2xl sm:w-auto sm:mb-0">
                                     Learn more

@@ -13,7 +13,7 @@ const Intro = () => {
                         </div>
                         <div className="flex-col my-4 text-center lg:text-left lg:my-0 lg:justify-end w-full lg:w-1/2 px-8" data-aos="zoom-in" data-aos-delay="500">
                             
-                            <h3 className="text-3xl  text-blue-900 font-bold">We, at RF AI, believe that social media platforms require a reliable way to tell apart real and AI-generated content.</h3>
+                            <h3 className="text-3xl  text-blue-900 font-bold">Social media platforms require a reliable and painless solution to track the scope of AI-generated content on their platforms.</h3>
                             <div>
                                 <p className='my-3 text-xl text-gray-600 font-semibold'>Our vision is to integrate with every social media platform, similar to captcha and cloudfare.</p>
                             </div>
