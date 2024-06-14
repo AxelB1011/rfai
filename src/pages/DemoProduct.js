@@ -386,7 +386,7 @@ const DemoProduct = (props) => {
                     <form onSubmit={sendEmail} id="demoProductForm">
                         <div className="w-full bg-white p-8 my-4 md:px-12 lg:w-9/12 lg:pl-20 lg:pr-40 mr-auto rounded-2xl shadow-2xl">
                             <div className="flex">
-                                <h1 className="font-bold text-center lg:text-left text-blue-900 uppercase text-4xl">Demo our products</h1>
+                                <h1 className="font-bold text-center lg:text-left text-blue-900 uppercase text-4xl">Demo our product</h1>
                             </div>
                             <div className="flex items-center my-4">
                                 <a href="https://youtu.be/8GhoHGJlFXY" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Link to our demo video</a>
