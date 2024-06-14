@@ -389,7 +389,7 @@ const DemoProduct = (props) => {
                                 <h1 className="font-bold text-center lg:text-left text-blue-900 uppercase text-4xl">Demo our products</h1>
                             </div>
                             <div className="flex items-center my-4">
-                                <a href="https://youtube.com/" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Link to our demo video</a>
+                                <a href="https://youtu.be/8GhoHGJlFXY" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Link to our demo video</a>
                             </div>
                             
                             {/* <div className="flex items-center my-4">
