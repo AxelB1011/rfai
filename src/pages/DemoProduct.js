@@ -541,7 +541,7 @@ const DemoProduct = (props) => {
                                 
                                     <div className='mt-5'>
                                         <h2 className="text-2xl">Send an E-mail</h2>
-                                        <p className="text-gray-400">gopal@rfai.info</p>
+                                        <p className="text-gray-400">gopalkrishna@usf.edu</p>
                                     </div>
                             
                                 </div>
